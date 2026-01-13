@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>uma msg para aquela menina</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Georgia", serif;
+        background: linear-gradient(180deg, #fde2e4, #e0f2ff);
+        overflow-x: hidden;
+    }
+
+    .heart {
+        position: fixed;
+        top: -10px;
+        color: rgba(255, 105, 180, 0.7);
+        font-size: 20px;
+        animation: fall linear infinite;
+        z-index: 1;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(110vh);
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.96);
+        max-width: 800px;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        text-align: center;
+        color: #c2185b;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 1.1em;
+        line-height: 1.75;
+        margin-bottom: 18px;
+        color: #333;
+    }
+
+    .destaque {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3em;
+        color: #880e4f;
+        margin: 30px 0;
+    }
+
+    .assinatura {
+        text-align: right;
+        margin-top: 35px;
+        font-style: italic;
+        color: #555;
+    }
+
+    .musica {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    iframe {
+        border-radius: 12px;
+        width: 100%;
+        max-width: 560px;
+        height: 315px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>uma msg para aquela menina</h1>
+
+        <p>
+            Do fundo do meu coração, espero que você entenda.
+            Vou ser breve e direto, até porque você sempre soube
+            que eu nunca fui bom em falar sobre sentimentos.
+        </p>
+
+        <p>
+            Existem pessoas que passam pela nossa vida e deixam marcas.
+            Você não deixou marcas… você deixou raízes.
+            Quando olho pra trás, vejo um garoto perdido, imaturo,
+            que tinha algo raro nas mãos e não soube cuidar.
+        </p>
+
+        <p>
+            Eu não entendia o valor dos seus gestos, das suas palavras,
+            nem do seu silêncio — mesmo quando eu já não merecia
+            mais nenhuma paciência.
+            Eu achava que o amor simplesmente acontecia,
+            sem perceber que ele também se constrói,
+            se protege e se honra.
+        </p>
+
+        <p>
+            O tempo é implacável.
+            Ele me mostrou verdades que eu só aprendi perdendo.
+            E no meio dos meus erros e tentativas,
+            percebi que muito do que eu sou hoje nasceu de você.
+        </p>
+
+        <p>
+            Do que você me ensinou sem perceber,
+            da forma como me olhava mesmo quando eu não merecia
+            ser visto com tanto carinho.
+        </p>
+
+        <p>
+            Eu carrego no peito uma gratidão que não envelhece.
+            Porque você foi mais do que amor:
+            foi espelho, foi lição,
+            foi um ponto seguro que eu não soube valorizar.
+        </p>
+
+        <p>
+            E mesmo que a vida tenha nos levado por estradas diferentes,
+            uma parte de mim sempre volta àquele tempo.
+            Não para reviver,
+            mas para reconhecer que foi você.
+        </p>
+
+        <p>
+            Talvez — e eu digo isso com maturidade agora —
+            você sempre será um dos amores mais puros
+            e profundos que eu já tive.
+        </p>
+
+        <p class="destaque">
+            VOCÊ FOI UMA DAS MELHORES PARTES DA MINHA HISTÓRIA
+        </p>
+
+        <p>
+            E mesmo que o mundo não nos aproxime outra vez,
+            tudo o que você fez por mim
+            será eterno.
+        </p>
+
+        <div class="musica">
+            <p><strong>Essa música diz muito do que eu nunca soube dizer:</strong></p>
+            <iframe src="https://www.youtube.com/embed?listType=search&list=Te+amo+demais+Marília+Mendonça"
+    title="Te Amo Demais - Marília Mendonça"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+        </div>
+
+        <p class="assinatura">
+            — de alguém que nunca deixou de sentir
+        </p>
+    </div>
+</div>
+<p2>tentei colocar uma musica da marilia mais nao sei ainda </p2>
+<script>
+    function criarCoracao() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❤";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+        heart.style.animationDuration = (Math.random() * 5 + 5) + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 10000);
+    }
+    setInterval(criarCoracao, 300);
+</script>
+
+</body>
+</html>
